@@ -25,6 +25,12 @@ li {
   border-left: 4px solid #aba;
 }
 
+li.selected-bro{
+  border-left: 4px solid #43A047  ;
+  background-color: #A5D6A7;
+
+}
+
 .launches-list div{
   padding: 18px;
   background: #ddd;

@@ -1,23 +1,23 @@
 export const peopleInSpace =  [
     {
-    name: "Randy Bresnik",
-    craft: "ISS"
+      name: "Randy Bresnik",
+      craft: "ISS"
     },
     {
-    name: "Paolo Nespoli",
-    craft: "ISS"
+      name: "Paolo Nespoli",
+      craft: "ISS"
     },
     {
-    name: "Alexander Misurkin",
-    craft: "ISS"
+      name: "Alexander Misurkin",
+      craft: "ISS"
     },
     {
-    name: "Mark Vande Hei",
-    craft: "ISS"
+      name: "Mark Vande Hei",
+      craft: "ISS"
     },
     {
-    name: "Joe Acaba",
-    craft: "ISS"
+      name: "Joe Acaba",
+      craft: "ISS"
     }
 ]
 
