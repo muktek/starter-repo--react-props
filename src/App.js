@@ -1,29 +1,25 @@
 import React, { Component } from 'react';
-import SpacePerson from './components/SpaceBro.js'
+import SpaceCadet from './components/SpaceCadet.js'
 //...and the named import
 import { LaunchListing } from './components/LaunchListing'
 
+import {peopleInSpace, spaceLaunches} from './data/datasource.js'
 
 class App extends Component {
-  constructor(parentClassPropsAndMethods){
-    super(parentClassPropsAndMethods)
-
-    this.state = {
-      launchesShowing: true
-    }
+  constructor(...args){
+    super(...args)
   }
 
-  _createSpacePersonComponents(){
-    const astrosArray = this.props.astros
-    const componentsArray = astrosArray.map(function(spacePersonObj, index){
-       return <SpacePerson theName={spacePersonObj.name} key={index}/>
+  _createSpaceCadetComponents(){
+
+    const componentsArray = peopleInSpace.map(function(spacePersonObj, index){
+       return <SpaceCadet theName={spacePersonObj.name} key={index}/>
     })
     return componentsArray
   }
 
   _createLaunchListingComponents(){
-    const launchesArray = this.props.launches
-    const launchListingComponentsArray = launchesArray.map(function(launchObj, indx){
+    const launchListingComponentsArray = spaceLaunches.map(function(launchObj, indx){
       console.log(launchObj)
       return <LaunchListing
         vehicle={launchObj.vehicle}
@@ -36,32 +32,23 @@ class App extends Component {
     return launchListingComponentsArray
   }
 
-  _hideLaunches(){
-      this.setState({launchesShowing: false})
-  }
 
   render() {
-    console.log(this.props.launches)
 
-    let launchesComponents
-
-    if (this.state.launchesShowing === true) {
-      launchesComponents = this._createLaunchListingComponents()
-    }
+    let spaceCadetComponentsArr = this._createSpaceCadetComponents()
 
     return (
       <div id="app-container">
-        <h2>Bros in Space</h2>
+        <h2>Space Cadets</h2>
         <ul>
-          {this._createSpacePersonComponents()}
+          {spaceCadetComponentsArr}
         </ul>
 
         <h2>Launches</h2>
         <div className="launches-list">
 
-          <button onClick={ ()=>{ this._hideLaunches() } }>Hide</button>
           <hr/>
-          { launchesComponents }
+          { this._createLaunchListingComponents() }
 
         </div>
       </div>

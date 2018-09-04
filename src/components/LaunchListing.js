@@ -7,6 +7,7 @@ export class LaunchListing extends Component {
     if(this.props.country === 'USA'){
       launchClass = 'launch--usa'
     }
+    
     return (
       <div className={launchClass}>
         <h4>{this.props.vehicle}</h4>
