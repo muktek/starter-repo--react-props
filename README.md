@@ -1,4 +1,4 @@
-#
+# Overview
 
 Part 1 - Simple Props - TitleHeader
   - Create `TitleHeader` component class + import into App
