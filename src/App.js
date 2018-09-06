@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import SpaceCadet from './components/SpaceCadet.js'
+
+// Step 1
+import TitleHeader from './components/TitleHeader.js'
 //...and the named import
 import { LaunchListing } from './components/LaunchListing'
 
@@ -39,17 +42,17 @@ class App extends Component {
 
     return (
       <div id="app-container">
-        <h2>Space Cadets</h2>
+
+        <TitleHeader theTitle='Space Cadets'/>
+
         <ul>
           {spaceCadetComponentsArr}
         </ul>
 
-        <h2>Launches</h2>
+        <TitleHeader theTitle='Launches'/>
+
         <div className="launches-list">
-
-          <hr/>
           { this._createLaunchListingComponents() }
-
         </div>
       </div>
     );

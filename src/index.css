@@ -13,10 +13,16 @@ body {
 
 h2 {
   font-weight: 200;
+  margin: 0;
+}
+
+.title-header{
   padding: 10px;
   border-bottom: 1px solid #333;
   border-top: 3px solid #333;
   margin-top: 3rem;
+  background: #333;
+  color: #fff;
 }
 
 li {
